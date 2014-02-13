@@ -25,7 +25,7 @@ public class MoviesFragment extends TabFragment {
 
         if (moviesManager.getGenres() != null) {
 
-            ArrayAdapter adapter = new ArrayAdapter<>(this.getActivity(), android.R.layout.simple_list_item_1, moviesManager.getGenres());
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_list_item_1, moviesManager.getGenres());
             genresListView = (ListView) relativeLayout.findViewById(R.id.moviesListView);
             genresListView.setAdapter(adapter);
             genresListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
